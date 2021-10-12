@@ -17,8 +17,15 @@
      <link rel="stylesheet" href="css/owl.carousel.min.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -27,8 +34,8 @@
      <nav class="navbar navbar-expand-lg">
       <div class="container">
           <a class="navbar-brand" href="index.html">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-           Mom Buddy
+            <img class="logo" src="images/logo.jpg" aria-hidden="true">
+            Mom<strong>Buddy</strong> Movement
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -38,20 +45,11 @@
 
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
-                  <!-- <li class="nav-item">
-                      <a href="#about" class="nav-link smoothScroll">Studio</a>
-                  </li>
                   <li class="nav-item">
-                      <a href="#project" class="nav-link smoothScroll">Our Works</a>
-                  </li> -->
-                  <!-- <li class="nav-item">
-                      <a href="blog.html" class="nav-link">Blog</a>
-                  </li> -->
-                  <li class="nav-item">
-                       <a href="https://nl-nl.facebook.com/groups/321859778847879/" class="fa fa-facebook nav-link"> Facebook</a>
+                       <a href="https://nl-nl.facebook.com/groups/321859778847879/" class="fa fa-facebook nav-link"> <h5> Facebook</h5></a>
                    </li>
                    <li class="nav-item">
-                       <a href="https://nl-nl.facebook.com/groups/321859778847879/" class="fa fa-instagram nav-link "> Instagram</a>
+                       <a href="https://www.instagram.com/mombuddymovement/" class="fa fa-instagram nav-link"> <h5> Instagram</h5></a>
                    </li>
 
                   <li class="nav-item">
@@ -61,25 +59,25 @@
           </div>
       </div>
   </nav>
-
-                      <form action="#" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                      <form method="POST" action="https://formsubmit.co/osman.oz01@outlook.com" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
                         <div class="row">
                           <div class="col-lg-4 col-10">
-                            <input type="text" class="form-control" name="name" placeholder="Name">
+                            <input type="text" class="form-control" name="name" placeholder="Uw naam">
                           </div>
 
-                          <div class="col-lg-6 col-12">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
+                          <div class="col-lg-4 col-12">
+                            <input type="email" class="form-control" name="email" placeholder="Uw Email adress">
                           </div>
 
-                          <div class="col-lg-5 col-12">
-                            <textarea class="form-control" rows="6" name="message" placeholder="Message"></textarea>
+                          <div class="col-lg-8 col-12">
+                            <textarea class="form-control" rows="10" cols="50" name="message" placeholder="Uw message" required></textarea>
                           </div>
-
-                          <div class="col-lg-4 mx-auto col-7">
-                            <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
+                  
+                          <div class="col-lg-6 mx-auto col-7">
+                            <button type="submit" class="form-control" id="submit-button" name="submit">Stuur</button>
                           </div>
                         </div>
+                        <input type="hidden" name="body" />
 
                       </form>
                     </div>
@@ -87,13 +85,10 @@
                </div>
           </div>
      </section>
+     <br> <br>
 
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
+     
+
      <div class="google-map" data-aos="zoom-in">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.1365414398642!2d4.979410615669499!3d52.34980877978229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60eafaa22bdef%3A0xd2e374615f2d8898!2sFregat%20279%2C%201113%20EH%20Diemen!5e0!3m2!1snl!2snl!4v1633953258066!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
      </div>
@@ -146,20 +141,13 @@ Fregat 279 - 1113 EH - Diemen, Amsterdam
 <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
 <ul class="social-icon">
 <li><a href="https://nl-nl.facebook.com/groups/321859778847879/" class="fa fa-facebook"></a></li>
-<li><a href="#" class="fa fa-instagram"></a></li>
+<li><a href="https://www.instagram.com/mombuddymovement/" class="fa fa-instagram"></a></li>
 </ul>
 </div>
 </div>
 </div>
 </footer>
 
-
-     <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
 
 </body>
 </html>

@@ -102,6 +102,7 @@
     letter-spacing: 0;
     color: var(--secondary-color);
   }
+ 
 
 
   /*  BLOCKQUOTES */
@@ -253,12 +254,13 @@
     padding: 0.6em 2em 0.8em 2em;
   }
 
+
   .navbar-expand-lg .navbar-nav .nav-link.contact:hover,
   .navbar-expand-lg .navbar-nav .nav-link.contact.active {
     background: var(--secondary-color);
     color: var(--white-color);
   }
-
+ 
   .navbar-nav .navbar-toggler-icon {
     background: none;
   }
@@ -591,3 +593,6 @@
     margin: 70px auto;
     text-align: center;
   }
+
+  
+  

@@ -16,9 +16,19 @@
      <link rel="stylesheet" href="css/aos.css">
      <link rel="stylesheet" href="css/owl.carousel.min.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/style.css">
+
+
+      <!-- SCRIPTS -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/smoothscroll.js"></script>
+      <script src="js/custom.js"></script>
 
 </head>
 <body>
@@ -40,15 +50,15 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+
+                  <li class="nav-item">
+                    <a href="contact.php" class="nav-link contact">Contact</a>
+                </li>
                     <li class="nav-item">
-                         <a href="https://nl-nl.facebook.com/groups/321859778847879/" class=" nav-link fa fa-facebook "><h5> Facebook</h5></a>
+                         <a href="https://nl-nl.facebook.com/groups/321859778847879/" class="nav-link contact">Facebook</a>
                      </li>
                      <li class="nav-item">
-                         <a href="https://instagram.com/mombuddymovement?utm_medium=copy_link/" class="nav-link fa fa-instagram"><h5> Instagram</h5></a>
-                     </li>
-
-                    <li class="nav-item">
-                         <a href="contact.html" class="nav-link contact">Contact</a>
+                         <a href="https://instagram.com/mombuddymovement?utm_medium=copy_link/" class="nav-link contact">Instagram</a>
                      </li>
                 </ul>
             </div>
@@ -64,7 +74,7 @@
                         <div class="col-lg-5 col-11">
                           <div class="hero-image"> -->
 
-                            <div class="card-slider">
+                            <div data-aos="fade-up" data-aos-delay="100" class="card-slider">
                               <input type="radio" id="1" name="sld"/>
                               <label for="1"><img class="cards" src="images/card1.jpg"></label>
                               <input type="radio" id="2" name="sld" checked/>
@@ -89,16 +99,18 @@
      
      <section class="about section-padding pb-0" id="about">
           <div class="container">
+           
                <div class="row">
 
                     <div class="col-lg-7 mx-auto col-md-10 col-12">
                          <div class="about-info">
-
-                              <h2 class="mb-4" data-aos="fade-up">Mom <strong>Buddy</strong> Movement</h2>
+                          
+                              <h2 class="mb-4" data-aos="fade-up"><img src="images/logo.jpg" width="45" height="45">
+                                Mom <strong>Buddy</strong> Movement</h2>
 
                               <p class="mb-0" data-aos="fade-up">Ben of ken jij een moeder die in nood is en een steuntje in de rug kan gebruiken?<br>
                                    Of wil je juist een moeder in nood helpen door bijv. kleding, schoenen of babyartikelen te doneren? Dat kan allemaal!
-
+                                
                                    In onze Facebookgroep <a href="https://nl-nl.facebook.com/groups/321859778847879/"><strong>“MomBuddyMovement”</strong></a> er al vele moeders geholpen.<br><br>
                                    Wordt snel lid van deze groep, plaats (eventueel anoniem) een oproep met jou hulpvraag en zie met hoeveel liefde onze leden jou kunnen helpen!
                                    Wij zijn ook actief op Instagram <a href="https://www.instagram.com/mombuddymovement/"><strong>“MomBuddyMovement”</strong></a>, volg je ons daar ook?<br><br>
@@ -120,6 +132,7 @@
                </div>
           </div>
      </section>
+
 
 
 
@@ -146,10 +159,8 @@
                         Ik heb MombuddyMovement in een opwelling bedacht,doordat ik zelf postnataal ben geweest na de geboorte van mijn dochter. 
                         Moederschap is meer dan verzorgen: er komt mentaal super veel bij kijken en je wereld word in 1 klap anders.<br>
                         🌈 #nicetomeetyou ❤️
-                        
                       </p>
-
-                      <p data-aos="fade-up" data-aos-delay="400">
+                      <p data-aos="fade-up" data-aos-delay="200">
                         <strong>Samantha Cherish</strong>
 
                         <!-- <span class="mx-1">/</span>
@@ -179,7 +190,7 @@
                              vrouwen die samen het verschil maken voor en met elkaar.
                             Laten we hier ook samen gaan voor goud. en glitter, en alles like dat <br> ✨#nicetomeetyou ❤️.</p>
      
-                           <p data-aos="fade-up" data-aos-delay="200">
+                           <p data-aos="fade-up" data-aos-delay="100">
                              <strong>Nancy</strong>
                            </p>
                          </div>
@@ -234,9 +245,9 @@
 
           <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
             <ul class="social-icon">
-              <li><a href="https://nl-nl.facebook.com/groups/321859778847879/" class="fa fa-facebook"></a></li>
-              <li><a href="https://www.instagram.com/mombuddymovement/" class="fa fa-instagram"></a></li>
-              <li><a href="#" class="fa fa-money"></a></li>
+              <li><a href="https://nl-nl.facebook.com/groups/321859778847879/" class="footer-icon fa fa-facebook" style="color:yellow"></a></li>
+              <li><a href="https://www.instagram.com/mombuddymovement/" class="footer-icon fa fa-instagram" style="color:yellow"></a></li>
+              <li><a href="#" class="fa fa-money" style="color:yellow"></a></li>
        
             
             </ul>
@@ -246,13 +257,7 @@
     </footer>
 
 
-     <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+    
 
 </body>
 </html>

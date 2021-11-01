@@ -1,3 +1,41 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'C:\xampp\htdocs\vendor\autoload.php';
+
+
+/* ... */
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$userEmail = $_POST['email'];
+$nameUser = $_POST['name'];
+$messageUser = $_POST['message'];
+$mailAdmin = 'osman.oz01@outlook.com';
+$nameAdmin = "osman";
+
+try {
+  $mail = new PHPMailer(TRUE);
+  $mail->setFrom($userEmail, $nameUser, 0);
+  $mail->addAddress($mailAdmin, $nameAdmin, 0);
+  $mail->Subject = 'Force';
+  $mail->Body = $messageUser;
+  
+  $mail->send();
+}
+catch (Exception $e)
+{
+  echo $e->errorMessage();
+}
+catch (\Exception $e)
+{
+  echo $e->getMessage();
+}
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,35 +83,35 @@
 
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="contact.php" class="nav-link contact">Contact</a>
+              </li>
                   <li class="nav-item">
-                       <a href="https://nl-nl.facebook.com/groups/321859778847879/" class="fa fa-facebook nav-link"> <h5> Facebook</h5></a>
+                       <a href="https://nl-nl.facebook.com/groups/321859778847879/" class="nav-link contact">Facebook</a>
                    </li>
                    <li class="nav-item">
-                       <a href="https://www.instagram.com/mombuddymovement/" class="fa fa-instagram nav-link"> <h5> Instagram</h5></a>
+                       <a href="https://www.instagram.com/mombuddymovement/" class="nav-link contact">Instagram</a>
                    </li>
 
-                  <li class="nav-item">
-                       <a href="contact.html" class="nav-link contact">Contact</a>
-                   </li>
               </ul>
           </div>
       </div>
   </nav>
-                      <form method="POST" action="https://formsubmit.co/osman.oz01@outlook.com" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                      <form method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
                         <div class="row">
-                          <div class="col-lg-4 col-10">
+                          <div class="col-lg-4 col-12">
                             <input type="text" class="form-control" name="name" placeholder="Uw naam">
                           </div>
-
+                          
                           <div class="col-lg-4 col-12">
                             <input type="email" class="form-control" name="email" placeholder="Uw Email adress">
                           </div>
 
-                          <div class="col-lg-8 col-12">
+                          <div class="col-lg-6 col-10">
                             <textarea class="form-control" rows="10" cols="50" name="message" placeholder="Uw message" required></textarea>
                           </div>
                   
-                          <div class="col-lg-6 mx-auto col-7">
+                          <div class="col-lg-4 mx-auto col-8">
                             <button type="submit" class="form-control" id="submit-button" name="submit">Stuur</button>
                           </div>
                         </div>

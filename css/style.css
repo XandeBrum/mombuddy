@@ -1,11 +1,9 @@
   
-  @font-face {
-      font-family: 'Plain-Regular';
-      src: url('../fonts/Plain-Regular.woff2') format('woff2'),
-          url('../fonts/Plain-Regular.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  }
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
 
   @font-face {
       font-family: 'Plain-Light';
@@ -24,21 +22,21 @@
   }
 
   :root {
-    --primary-color:        #057a8d;
-    --secondary-color:      #f1c111;
+    --primary-color:        #DDF2F4;
+    --secondary-color:      #84A6D6;
     --white-color:          #ffffff;
     --dark-color:           #171819;
-    --project-bg:           #f0f8ff;
-    --menu-bg:              #0c8195;
+    --project-bg:           #DDF2F4;
+    --menu-bg:              #A7C7E7;
 
     --title-color:          #15141a;
     --gray-color:           #909090;
     --link-color:           #404040;
     --p-color:              #666262;
 
-    --base-font-family:     'Plain-Light', sans-serif;
-    --title-font-family:    'Plain-Regular', sans-serif;
-    --font-bold-family:     'Plain-Bold', sans-serif;
+    --base-font-family:     "Times New Roman", Times, serif;
+    --title-font-family:    'Plain-Regular', Times New Roman;
+    --font-bold-family:     'Plain-Bold', Times New Roman;
     --font-weight-bold:     bold;
 
     --h1-font-size:         42px;
@@ -53,11 +51,19 @@
   }
 
   body {
-    background: var(--white-color);
+    background: var(--dark-color);
     font-family: var(--base-font-family);
+    overflow-x: hidden;
   }
 
-
+  .mySlides {
+    width:50%;
+  }
+@media screen {
+  .mySlides {
+    width: 100%;
+  }
+}
   /*---------------------------------------
      TYPOGRAPHY              
   -----------------------------------------*/
@@ -68,11 +74,12 @@
   }
 
   h1 {
-    color: var(--title-color);
+    color: var(---color);
     font-size: var(--h1-font-size);
   }
 
   h2 {
+    color: var(--white-color);
     font-size: var(--h2-font-size);
     font-weight: 100;
   }
@@ -92,9 +99,11 @@
   }
 
   p {
-    color: var(--p-color);
+    color: var(--white-color);
     font-size: var(--p-font-size);
     line-height: 1.5em;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
 
   b, 
@@ -192,7 +201,8 @@
   }
 
   ::selection {
-    background: var(--secondary-color);
+    background: #4382BB; 
+    
     color: var(--white-color);
   }
 
@@ -215,7 +225,7 @@
   -----------------------------------------*/
 
   .navbar {
-    background: var(--menu-bg);
+    background: var(--black-color);
     z-index: 2;
     top: 0;
     right: 0;
@@ -342,9 +352,6 @@
     overflow: hidden;
   }
 
-  .hero-bg {
-    background: linear-gradient(175deg, var(--primary-color) 20%, var(--white-color) 30%);
-  }
 
   .hero-image {
     display: flex;
@@ -386,7 +393,7 @@
   .newsletter-form .form-control,
   .contact-form .form-control {
     box-shadow: none;
-    background: var(--project-bg);
+    background: #bdd0e2;
     border: 0;
     padding: 1.7em 1.3em;
     margin: 14px 0;
@@ -394,9 +401,10 @@
 
   .newsletter-form button,
   .contact-form #submit-button {
-    background: var(--primary-color);
+    background: #b0d3f3;
     border-radius: var(--border-radius-large);
     color: var(--white-color);
+    margin-top: 50%;
     cursor: pointer;
     font-size: var(--p-font-size);
     line-height: 0px;
@@ -571,7 +579,7 @@
   }
  
   .cards {
-    border-radius: 2em;
+    border-radius: 0em;
     width: 350px;
     height: 500px;
   }
@@ -592,7 +600,10 @@
   .card-slider{
     margin: 70px auto;
     text-align: center;
+    width: 70%;
   }
 
+
+  
   
   

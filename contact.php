@@ -1,38 +1,122 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-require 'C:\xampp\htdocs\vendor\autoload.php';
-
-
-/* ... */
+include "database.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-$userEmail = $_POST['email'];
-$nameUser = $_POST['name'];
-$messageUser = $_POST['message'];
-$mailAdmin = 'osman.oz01@outlook.com';
-$nameAdmin = "osman";
 
-try {
-  $mail = new PHPMailer(TRUE);
-  $mail->setFrom($userEmail, $nameUser, 0);
-  $mail->addAddress($mailAdmin, $nameAdmin, 0);
-  $mail->Subject = 'Force';
-  $mail->Body = $messageUser;
+  $db = new database();
+
+    $sql = "INSERT INTO user VALUES (:user_id, :name, :email, :telNo, :message)";
+
+        $placeholders = [
+        'user_id'=> NULL,
+        'name'=> $_POST['name'],
+        'email'=> $_POST['email'],
+        'telNo'=> $_POST['telNo'],
+        'message'=> $_POST['message']
+        ];
+             $db->insert($sql, $placeholders);
+
+                if($db) {
+                  
+                    
+                    header("Location:index.html");
+
+                    echo '<script language="javascript">';
   
-  $mail->send();
+                    echo 'alert("Uw bericht is verstuurd. We nemen zo snel mogelijk contact met u.")';
+  
+                    echo '</script>';
+
+                }
+
 }
-catch (Exception $e)
-{
-  echo $e->errorMessage();
-}
-catch (\Exception $e)
-{
-  echo $e->getMessage();
-}
-}
-?>
+ 
+
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+// // require_once "vendor/autoload.php";
+
+
+// /* ... */
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
+
+//   $userEmail = $_POST['email'];
+//   $nameUser = $_POST['name'];
+//   $messageUser = $_POST['message'];
+//   $telno = $_POST['telno'];
+  
+//   $mailAdmin = 'osman.oz01120@gmail.com';
+  
+  
+  
+//   try {
+  
+  
+  
+//     $mail = new PHPMailer(TRUE);
+  
+//     $mail->isSMTP();
+  
+//     $mail->Port = 465;
+  
+//     $mail->SMTPAuth = true;
+  
+  
+  
+//       $mail->Username = $mailAdmin;
+  
+//       $mail->Password = 'Osmanosman1.';
+  
+  
+  
+//         $mail->isHTML(true);
+  
+//         $mail->From = $userEmail;
+  
+//         $mail->FromName = $nameUser;
+  
+  
+  
+  
+//           $mail->addAddress($mailAdmin);
+  
+   
+  
+//                 $mail->Subject = 'Verstuurd door: ' .$userEmail . ' Telefoonnummer= ' . $telno;
+  
+//                 $mail->Body = $messageUser;
+  
+//                 $mail->Host = 'smtp.gmail.com';
+  
+//                 $mail->SMTPSecure = 'ssl';
+  
+//                 $mail->send();
+  
+  
+  
+//                     echo '<script language="javascript">';
+  
+//                     echo 'alert("Uw bericht is verstuurd. We nemen zo snel mogelijk contact met u.")';
+  
+//                     echo '</script>';
+  
+//   }
+  
+//       catch (Exception $e) {
+  
+//         echo $e->errorMessage();
+  
+//   }
+  
+  
+  
+//   }
+  
+  ?>
+
 
 
 
@@ -41,6 +125,7 @@ catch (\Exception $e)
 <head>
 
      <title>Mom Buddy</title>
+     <link rel="icon" href="images/logo.jpg" type="image/icon type">
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -92,6 +177,9 @@ catch (\Exception $e)
                    <li class="nav-item">
                        <a href="https://www.instagram.com/mombuddymovement/" class="nav-link contact">Instagram</a>
                    </li>
+                   <li class="nav-item">
+                  <a href="admin.php" class="nav-link contact">Admin</a>
+              </li>
 
               </ul>
           </div>
@@ -105,6 +193,10 @@ catch (\Exception $e)
                           
                           <div class="col-lg-4 col-12">
                             <input type="email" class="form-control" name="email" placeholder="Uw Email adress">
+                          </div>
+
+                          <div class="col-lg-4 col-12">
+                            <input type="text" class="form-control" name="telNo" placeholder="Uw telefoonnummer (optioneel)">
                           </div>
 
                           <div class="col-lg-6 col-10">
@@ -134,7 +226,7 @@ catch (\Exception $e)
 </div>
 </div>
 
-
+<!-- 
 
 <footer class="site-footer">
 <div class="container">
@@ -185,7 +277,7 @@ Fregat 279 - 1113 EH - Diemen, Amsterdam
 </div>
 </div>
 </div>
-</footer>
+</footer> -->
 
 
 </body>
